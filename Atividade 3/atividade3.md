@@ -237,3 +237,235 @@ git cherry-pick C5 C4 C3 C2
 ```bash
 git branch -f three C2
 ```
+
+## Push & Pull -- repositórios remotos no Git!
+
+### 1. Introdução à clonagem
+
+```bash
+git clone
+```
+
+### 2. Branches remotas
+
+```bash
+git commit
+```
+
+```bash
+git checkout o/main
+```
+
+```bash
+git commit
+```
+
+### 3. Git Fetch
+
+```bash
+git fetch
+```
+
+### 4. Git Pull
+
+```bash
+git pull
+```
+
+### 5. Simulando trabalho em equipe
+
+```bash
+git clone
+```
+
+```bash
+git fakeTeamwork 2
+```
+
+```bash
+git commit
+```
+
+```bash
+git pull
+```
+
+### 6. Git Push
+
+```bash
+git commit
+```
+
+```bash
+git commit
+```
+
+```bash
+git push
+```
+
+### 7. Histórico divergente
+
+```bash
+git clone
+```
+
+```bash
+git fakeTeamwork
+```
+
+```bash
+git commit
+```
+
+```bash
+git pull --rebase
+```
+
+```bash
+git push
+```
+
+### 8. Main bloqueado
+
+```bash
+git branch -f main o/main
+```
+
+```bash
+git checkout -b feature C2
+```
+
+```bash
+git push origin feature
+```
+
+## Até a origin e além -- repositórios remotos avançados!
+
+### 1. Push Main!
+
+```bash
+git fetch
+```
+
+```bash
+git rebase o/main side1
+```
+
+```bash
+git rebase side1 side2
+```
+
+```bash
+git rebase side2 side3
+```
+
+```bash
+git rebase side3 main
+```
+
+```bash
+git push
+```
+
+### 2. Merge com remotos
+
+```bash
+git checkout main
+```
+
+```bash
+git pull
+```
+
+```bash
+git merge side1
+```
+
+```bash
+git merge side2
+```
+
+```bash
+git merge side3
+```
+
+```bash
+git push
+```
+
+### 3. Seguindo remotos
+
+```bash
+git checkout -b side o/main
+```
+
+```bash
+git commit
+```
+
+```bash
+git pull --rebase
+```
+
+```bash
+git push
+```
+
+### 4. Parâmetros do git push
+
+```bash
+git push origin main
+```
+
+```bash
+git push origin foo
+```
+
+### 5. Parâmetros do git push -- expandido
+
+```bash
+git push origin main^:foo
+```
+
+```bash
+git push origin foo:main
+```
+
+### 6. Parâmetros do fetch
+
+```bash
+git fetch origin c3:foo
+```
+
+```bash
+git fetch origin c6:main
+```
+
+```bash
+git checkout foo
+```
+
+```bash
+git merge main
+```
+
+### 7. Origem vazia
+
+```bash
+git push origin :foo
+```
+
+```bash
+git fetch origin :bar
+```
+
+### 8. Parâmetros do pull
+
+```bash
+git pull origin c3:foo
+```
+
+```bash
+git pull origin c2:side
+```
